@@ -13,7 +13,7 @@ window.onload = function () {
 
   // input
   const radius = params.get("r")
-  console.log(aBase)
+  console.log(radius)
 
   // process
   const volume = (4 / 3 ) * 3.14 * radius ** 3
