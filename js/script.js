@@ -1,23 +1,27 @@
-// Copyright (c) 2020 Chloe Havel All rights reserved
+// Copyright (c) 2020 Mr. Coxall All rights reserved
 //
-// Created by: Chloe Havel
+// Created by: Mr. Coxall
 // Created on: Sep 2020
 // This file contains the JS functions for index.html
 
 "use strict"
 
-/**
- * Check servie worker.
- */
-if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-PWA-Test-1/sw.js", {
-    scope: "/ICS2O-PWA-Test-1/",
-  })
-}
+window.onload = function() {
+  // this calculates volume of a pyramid
 
-/**
- * This function displays an alert.
- */
-function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+  const params = new URLSearchParams(document.location.search)
+
+  // input
+  const aBase = params.get('a')
+  const bBase = params.get('b')
+  const height = params.get('h')
+  console.log(aBase)
+
+  // process
+  const area = ((aBase + bBase) / 2) * height
+  const dimensions = "<ul>\n<li>a base = " + aBase + "</li>\n<li>b base = " + bBase + "</li>\n<li>height = " + height + "</li>\n</ul>"
+
+  // output
+  document.getElementById('dimensions').innerHTML = dimensions
+  document.getElementById('area').innerHTML = 'Area is: ' + area + ' mm²'
 }
