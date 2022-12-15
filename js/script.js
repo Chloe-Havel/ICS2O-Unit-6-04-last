@@ -12,21 +12,14 @@ window.onload = function () {
   const params = new URLSearchParams(document.location.search)
 
   // input
-  const radius = params.get("a")
-  const bBase = params.get("b")
-  const height = params.get("h")
+  const radius = params.get("radius")
   console.log(aBase)
 
   // process
   const volume = (4 / 3 ) * 3.14 * radius ** 3
   const dimensions =
-    "<ul>\n<li>a base = " +
-    aBase +
-    "</li>\n<li>b base = " +
-    bBase +
-    "</li>\n<li>height = " +
-    height +
-    "</li>\n</ul>"
+    "<ul>\n<li>radius = " +
+    radius +
 
   // output
   document.getElementById("dimensions").innerHTML = dimensions
