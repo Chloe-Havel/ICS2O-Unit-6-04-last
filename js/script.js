@@ -12,13 +12,13 @@ window.onload = function () {
   const params = new URLSearchParams(document.location.search)
 
   // input
-  const aBase = params.get("a")
+  const radius = params.get("a")
   const bBase = params.get("b")
   const height = params.get("h")
   console.log(aBase)
 
   // process
-  const area = ((aBase + bBase) / 2) * height
+  const volume = (4 / 3 ) * 3.14 * radius ** 3
   const dimensions =
     "<ul>\n<li>a base = " +
     aBase +
@@ -30,5 +30,5 @@ window.onload = function () {
 
   // output
   document.getElementById("dimensions").innerHTML = dimensions
-  document.getElementById("area").innerHTML = "Area is: " + area + " mm²"
+  document.getElementById("volume").innerHTML = "volume is: " + volume + " mm "
 }
