@@ -16,7 +16,8 @@ window.onload = function () {
   console.log(radius)
 
   // process
-  const volume = (4 / 3 ) * 3.14 * radius ** 3
+  let volume = (4 / 3 ) * 3.14 * radius ** 3
+  volume = Math.round(volume);
 
   // output
   document.getElementById("volume").innerHTML = "volume is: " + volume + " mm³ "
