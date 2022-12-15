@@ -12,16 +12,12 @@ window.onload = function () {
   const params = new URLSearchParams(document.location.search)
 
   // input
-  const radius = params.get("radius")
+  const radius = params.get("r")
   console.log(aBase)
 
   // process
   const volume = (4 / 3 ) * 3.14 * radius ** 3
-  const dimensions =
-    "<ul>\n<li>radius = " +
-    radius +
 
   // output
-  document.getElementById("dimensions").innerHTML = dimensions
-  document.getElementById("volume").innerHTML = "volume is: " + volume + " mm "
+  document.getElementById("volume").innerHTML = "volume is: " + volume + " mm³ "
 }
